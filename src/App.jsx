@@ -1,7 +1,8 @@
-import React , {useState, useReducer, useEffect, useCallback} from "react"
-import SelectField from "./components/Select.jsx" 
-import listOfGenreOption from "./store/genre.json"
-import listOfMoodOption from "./store/mood.json"
+import React , {useState, useReducer, useEffect, useCallback} from "react";
+import SelectField from "./components/Select.jsx";
+import listOfGenreOption from "./store/genre.json";
+import listOfMoodOption from "./store/mood.json";
+import "./App.css"
 
 const reducer = (state, action) => {
   switch (action.type) {
@@ -38,9 +39,9 @@ export default function App() {
         return;
     }
 
-    const API_KEY = import.meta.env.VITE_GEMINI_API_KEY; 
+    const GEMINI_API_KEY = import.meta.env.VITE_GEMINI_API_KEY; 
     
-    const URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${API_KEY}`;
+    const URL = `https://generativelanguage.googleapis.com/v1/models/gemini-2.5-flash:generateContent?key=${GEMINI_API_KEY}`;
       
     dispatch({ type: 'START_LOADING' });
 

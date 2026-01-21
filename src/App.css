@@ -40,3 +40,14 @@
 .read-the-docs {
   color: #888;
 }
+
+
+.input{
+margin: 20px;
+}
+
+button{
+  background-color: #ffffff;
+  color: rgb(40, 182, 182);
+  margin: 10px;
+}
